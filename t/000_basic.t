@@ -17,6 +17,23 @@ BEGIN {
 
 ok defined $Games::Word::Wordlist::Enable::VERSION, "VERSION is set";
 
+
+my $obj = Games::Word::Wordlist::Enable -> new;
+
+isa_ok ($obj, 'Games::Word::Wordlist::Enable');
+
+is ($obj -> words, 173528, 'Correct number of words');
+
+foreach my $word (qw [one two three four five six seven]) {
+    ok  $obj -> is_word ($word),           "$word in list";
+    ok !$obj -> is_word (ucfirst $word), "\u$word not in list";
+}
+
+foreach my $word (qw [aap noot mies wim zus]) {
+    ok !$obj -> is_word ($word), "$word not in list";
+}
+
+
 Test::NoWarnings::had_no_warnings () if $r;
 
 done_testing;
