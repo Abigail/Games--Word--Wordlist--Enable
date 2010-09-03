@@ -26,8 +26,9 @@ my %args = (
     VERSION_FROM         =>  $LIB_FILE,
     ABSTRACT_FROM        =>  $LIB_FILE,
     PREREQ_PM            => {
-        'strict'             =>  0,
-        'warnings'           =>  0,
+        'strict'                =>  0,
+        'warnings'              =>  0,
+        'Games::Word::Wordlist' =>  0,
     },
     MIN_PERL_VERSION     =>   5.006,
     AUTHOR               =>  "$ME <$LOCAL_ADDR\@$DOMAIN>",
