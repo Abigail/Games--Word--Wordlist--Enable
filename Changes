@@ -1,5 +1,6 @@
-Version
+Version 20100904
 + Removed Kwalitee tests
++ List more dependencies
 
 Version 2009112301
 + First release
