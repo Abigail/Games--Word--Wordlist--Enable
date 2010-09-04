@@ -8,7 +8,7 @@ no  warnings 'syntax';
 use Games::Word::Wordlist;
 
 our @ISA     = qw [Games::Word::Wordlist];
-our $VERSION = '2009112301';
+our $VERSION = '2010090401';
 
 sub new {
     bless Games::Word::Wordlist -> new ([map {split} <DATA>]), shift
